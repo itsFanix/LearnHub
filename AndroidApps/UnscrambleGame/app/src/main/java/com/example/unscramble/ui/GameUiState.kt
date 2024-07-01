@@ -1,10 +1,11 @@
 package com.example.unscramble.ui
 
-import kotlinx.coroutines.flow.MutableStateFlow
+
 
 data class GameUiState(
-    val currentScrambleWord: String = "") {
+    val currentScrambleWord: String = "",
+    val isGuessedWordWrong: Boolean = false,
+) {
     //Game UI state
-    private val _uiState = MutableStateFlow(GameUiState())
 
 }

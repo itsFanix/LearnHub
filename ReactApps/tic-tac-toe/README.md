@@ -28,3 +28,25 @@ export default {
 - Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
 - Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
 - Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+
+
+# What I learn with this project
+### Step1:  Create React app with Vite 
+  ```bash
+  npx create-vite your-project-name --template react
+  ```
+### Step2: Install dependencies 
+
+```bash
+cd your-project-name
+npm  i 
+```
+### Step3 : Run the developpment server
+```bash 
+  npm run dev
+```
+
+### Notes
+
+`JSX` element is a combination of JavaScript and HTML tags that describles what you'd like to display
+React components need to return a single JSX element and not multiple adjacent
