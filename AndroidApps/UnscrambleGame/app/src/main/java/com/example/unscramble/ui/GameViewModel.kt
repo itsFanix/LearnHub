@@ -41,7 +41,7 @@ class GameViewModel : ViewModel() {
     }
     private fun resetGame()  {
         usedWords.clear()
-        _uiState.value= GameUiState(currentScrambleWord= pickRandomWordAndShuffles())
+        _uiState.value= GameUiState(currentScrambleWord = pickRandomWordAndShuffles())
     }
 
     init {
@@ -59,5 +59,10 @@ class GameViewModel : ViewModel() {
             _uiState.update { currentState -> currentState.copy(isGuessedWordWrong = true) }
         }
         updateUserGuess("")
+    }
+
+    fun skipWord() {
+        _uiState.update { currentState ->  currentState.copy(currentScrambleWord = pickRandomWordAndShuffles()) }
+
     }
 }
