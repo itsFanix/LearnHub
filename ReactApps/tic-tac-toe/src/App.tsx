@@ -4,59 +4,47 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 
+//
+function Square({value, onSquareClick } : {value: string, onSquareClick : () => void }) {
 
-function Square({value } : {value: string}) {
+  //const [value , setValue ] = useState<string |null>(null)
 
-    function handleClick(){
-      console.log("clicked !")
-    }
+    
    return ( 
     <button 
       className = "square"
-      onClick={handleClick}
+      onClick={onSquareClick}
     > {value} </button>
-  //  <>
-  //  <div className ='board-row'>
-  //  <button className = "square">1</button>
-  //  <button className = "square">2</button>
-  //  <button className = "square">3</button>
-  //  </div>
-
-  //  <div className ='board-row'>
-  //  <button className = "square">4</button>
-  //  <button className = "square">5</button>
-  //  <button className = "square">6</button>
-  //  </div>
-
-  //  <div className ='board-row'>
-  //  <button className = "square">7</button>
-  //  <button className = "square">8</button>
-  //  <button className = "square">9</button>
-  //  </div>
- 
-  //  </>
-   
   );
 }
 
 
 export default function  Board() {
+
+  const [squares, setSquares] = useState(Array(9).fill(null))
+
+
+  function handleClick(){
+    const nextSquares = squares.slice()
+    nextSquares[0] = "X"
+    setSquares(nextSquares)
+  }
   return (
     <>
       <div className="board-row">
-          <Square value = "1"/>
-          <Square  value = "2"/>
-          <Square  value = "3"/>
+          <Square value={squares[0]}  onSquareClick={handleClick}/>
+          <Square value={squares[1]}   onSquareClick={handleClick} />
+          <Square  value={squares[2]}  onSquareClick={handleClick} />
       </div>
       <div className="board-row">
-          <Square  value = "4" />
-          <Square  value = "5" />
-          <Square  value = "6" />
+          <Square   value={squares[3]}  onSquareClick={handleClick} />
+          <Square value={squares[4]}   onSquareClick={handleClick} />
+          <Square   value={squares[5]}  onSquareClick={handleClick} />
       </div>
       <div className="board-row">
-          <Square   value = "7" />
-          <Square  value = "8" />
-          <Square  value = "9" />
+          <Square  value={squares[6]}  onSquareClick={handleClick}  />
+          <Square value={squares[7]}  onSquareClick={handleClick}  />
+          <Square value={squares[8]}  onSquareClick={handleClick} />
       </div>
     </>
   )
