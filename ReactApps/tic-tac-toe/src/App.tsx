@@ -42,7 +42,7 @@ function Square({value, onSquareClick } : {value: string, onSquareClick : () => 
     <>
     <div className='status'>{status}</div>
       <div className="board-row">
-          <Square value={squares[0]}  onSquareClick={() => handleClick(0)}/>
+          <Square  value={squares[0]}  onSquareClick={() => handleClick(0)}/>
           <Square value={squares[1]}   onSquareClick={() => handleClick(1)} />
           <Square  value={squares[2]}  onSquareClick={() => handleClick(2)} />
       </div>
