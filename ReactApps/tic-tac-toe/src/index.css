@@ -66,3 +66,10 @@ button:focus-visible {
     background-color: #4bbba8;
   }
 }
+
+.game {
+  background-color: #646cff;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}

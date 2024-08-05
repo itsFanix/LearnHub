@@ -7,7 +7,7 @@ import './App.css'
 //
 function Square({value, onSquareClick } : {value: string, onSquareClick : () => void }) {
 
-  //const [value , setValue ] = useState<string |null>(null)
+ 
 
     
    return ( 
