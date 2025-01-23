@@ -4,11 +4,7 @@ import './App.css'
 
 
 //
-function Square({value, onSquareClick } : {value: string, onSquareClick : () => void }) {
-
- 
-
-    
+function Square({value, onSquareClick } : {value: string, onSquareClick : () => void }) { 
    return ( 
     <button 
       className = "square"
@@ -19,8 +15,6 @@ function Square({value, onSquareClick } : {value: string, onSquareClick : () => 
 
 
  function  Board({xIsNext, squares, onPlay} : {xIsNext : Boolean, squares : string[], onPlay: (arg: string[]) => void }) {
-
- 
 
   const winner = calculateWinner(squares);
   let status  ;
@@ -88,7 +82,6 @@ function calculateWinner(squares: Array<string>) {
 
 export default function Game(){
 
-
   const [history, setHistory] = useState([Array(9).fill(null)])
 
   const [currentMove, setCurrentMove] = useState(0)
@@ -97,7 +90,6 @@ export default function Game(){
   const currentSquares = history[currentMove]
 
  function handlePlay(nextSquares : string[])  {
-
   const nextHistory = [...history.slice(0,currentMove + 1), nextSquares]
   setHistory(nextHistory)
   setCurrentMove(nextHistory.length - 1)
@@ -106,13 +98,11 @@ export default function Game(){
 
  function jumpTo(nextMove : number){
   setCurrentMove(nextMove);
-  
-
  }
+
  const  moves = history.map((squares, move) => {
    let description;
    move > 0 ? description = 'Go to move #' + move : description = 'Go to game start'
-   
    return (
      <li key ={move}>
        <button onClick={ () => jumpTo(move)}>{description}</button>
@@ -125,9 +115,9 @@ export default function Game(){
       <div className='game-board'>
         <Board  xIsNext = {xIsNext} squares = {currentSquares} onPlay = {handlePlay}/>
       </div>
-      <div className='game-Info'>
-        <ol>{moves}</ol>
-      </div>
+      {/* <div className='game-Info'> */}
+        {/* <ol>{moves}</ol> */}
+      {/* </div> */}
     </div>
   )
 }
