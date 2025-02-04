@@ -27,7 +27,7 @@ export function TodoForm () {
 
     return (
         <>
-         <form  className="  bg-gray-50 shadow-md rounded px-10 pt-10 pb-10 mb-6 w-full ">
+         <form  className="  shadow-md rounded px-10 pt-10 pb-10 mb-6 w-full ">
             <MyInput/>
             <MyButton/>
          </form>
