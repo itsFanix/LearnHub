@@ -2,7 +2,7 @@
 function MyButton() {
 
      return (
-        <button type="submit" className="bg-blue-300 w-30  rounded-xl  py-2 px-3">
+        <button type="submit" className="bg-blue-300 w-40  rounded-xl  py-2 px-3">
              Add
         </button>
      )
