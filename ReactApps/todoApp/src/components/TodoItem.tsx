@@ -7,7 +7,7 @@
 
 import { Task } from "../data/types"
 
-function TodoItem(todo: Task ) {
+function TodoItem(todo: Task) {
     return (
         <>
         <div>
