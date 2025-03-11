@@ -2,6 +2,7 @@ function ListGroup() {
   return (
     /**
      * Empty angle brackets we're telling react to use Fragment
+     *
      * to wrap all these children
      */
     <>
