@@ -4,6 +4,7 @@ import "./App.css";
 import ListGroup from "./components/ListGroup";
 import Alert from "./components/Alert";
 import Button from "./components/Button";
+import UserProfil from "./components/UserProfil";
 
 const handleSelectItem = (item: string) => {
   console.log(item);
@@ -23,6 +24,8 @@ function App() {
         <Alert onClose={() => setAlertVisibility(false)}>Hello Fanny </Alert>
       )}
       <Button onClick={() => setAlertVisibility(true)}> My button</Button>
+
+      <UserProfil></UserProfil>
     </div>
   );
 }
