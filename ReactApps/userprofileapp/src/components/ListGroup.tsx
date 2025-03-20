@@ -66,7 +66,7 @@ export default ListGroup;
  * Data via Props : are the inputs to our components
  * Passing Functions via Props
  * State vs Props
- * State : Local variable , Data Managed bya component similar to local variables / Mutable
+ * State : Local variable , Data Managed by a component similar to local variables / Mutable
  * Props : Input passed to a component Similar to function args / Immutable
  * Passing Children
  * Inspecting Components with React Dev Tools : Extension

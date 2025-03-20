@@ -5,6 +5,7 @@ import ListGroup from "./components/ListGroup";
 import Alert from "./components/Alert";
 import Button from "./components/Button";
 import UserProfil from "./components/UserProfil";
+import Counter from "./components/Counter";
 
 const handleSelectItem = (item: string) => {
   console.log(item);
@@ -26,6 +27,7 @@ function App() {
       <Button onClick={() => setAlertVisibility(true)}> My button</Button>
 
       <UserProfil></UserProfil>
+      <Counter></Counter>
     </div>
   );
 }
