@@ -11,7 +11,8 @@ function App() {
       <div className=" w-1/3 p-10">
         <TodoForm />
       </div>
-      <div className="w-2/3  bg-blue-200  ">
+      <div className="w-2/3  bg-blue-200  ">  
+        {/* I need to pass props */}
         <TodoList />
       </div>
     </div>

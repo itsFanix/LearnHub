@@ -1,11 +1,10 @@
+interface Props {}
 
-
- export function TodoList() {
-
-    return ( 
+export function TodoList() {
+  const todo = [];
+  return (
     <>
-     <h2>I display Your TODO </h2>
+      <h2>I display Your TODO </h2>
     </>
-    )
-
+  );
 }
