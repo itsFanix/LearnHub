@@ -1,15 +1,18 @@
 import { useState } from "react";
 
-interface Props {}
+type Props = {
+  tasks: string[];
+};
 
-export function TodoList() {
-  const [todos, setTodos] = useState([]);
+export function TodoList({ tasks }: Props) {
   return (
     <>
       <h2>I display Your TODO </h2>
-      {todos.map((todo) => (
-        <li>{todo}</li>
-      ))}
+      <ul>
+        {tasks.map((task, i) => (
+          <li key={i}> {task}</li>
+        ))}
+      </ul>
     </>
   );
 }

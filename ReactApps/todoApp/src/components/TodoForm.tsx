@@ -1,4 +1,6 @@
-type Props = {};
+type Props = {
+  onAddTask: (task: string) => void;
+};
 function MyButton() {
   return (
     <button type="submit" className="bg-blue-300 w-40  rounded-xl  py-2 px-3">
@@ -23,6 +25,9 @@ function MyInput() {
 }
 
 export function TodoForm() {
+  // Event handlers have access to the components's props caus
+  // the are declared inside of the component
+  const handleSubmit = () => {};
   return (
     <>
       <form className=" shadow-md rounded px-10 pt-10 pb-10 mb-6 w-full ">
