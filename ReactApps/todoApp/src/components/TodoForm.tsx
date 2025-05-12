@@ -4,21 +4,6 @@ type Props = {
   onAddTask: (task: string) => void;
 };
 
-function MyInput() {
-  return (
-    <div className="mb-8">
-      <label className=" block text-gray-700 text-sm font-bold mb-2">
-        <h3 className="mb-2">New Task :</h3>
-        <input
-          className="shadow appearance-none border-0 rounded w-full py-2 px-3  text-gray-700 leading-tight  focus:outline-none focus:shadow-outline"
-          id="newTask"
-          required
-        />
-      </label>
-    </div>
-  );
-}
-
 export function TodoForm({ onAddTask }: Props) {
   // Event handlers have access to the components's props caus
   // the are declared inside of the component
@@ -35,24 +20,19 @@ export function TodoForm({ onAddTask }: Props) {
     <>
       <form
         onSubmit={handleSubmit}
-        className=" shadow-md rounded px-10 pt-10 pb-10 mb-6 w-full "
+        className="flex flex-row items-center justify-center gap-4  "
       >
-        <div className="mb-8">
-          <label className=" block text-gray-700 text-sm font-bold mb-2">
-            <h3 className="mb-2">New Task :</h3>
-            <input
-              value={input}
-              onChange={(e) => setInput(e.target.value)}
-              placeholder="New Task"
-              className="shadow appearance-none border-0 rounded w-full py-2 px-3  text-gray-700 leading-tight  focus:outline-none focus:shadow-outline"
-              id="newTask"
-              required
-            />
-          </label>
-        </div>
+        <input
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+          placeholder="New Task"
+          className="shadow appearance-none bg-pink-50 text-pink-100  border-2 rounded-2xl  border-green-200  py-2 px-3   focus:outline-none focus:shadow-outline text-2xl font-bold"
+          id="newTask"
+          required
+        />
         <button
           type="submit"
-          className="bg-blue-300 w-40  rounded-xl  py-2 px-3"
+          className="bg-pink-50 text-pink-100 font-bold border-2 rounded-2xl border-green-200 py-2 px-4 text-2xl "
         >
           Add
         </button>

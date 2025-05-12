@@ -1,43 +1,18 @@
 @import "tailwindcss";
-/* #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
+/* Since Tailwind has be updated to v4  You can now confiugre all your customiztions directly in the css file where tou import your Tailwind   */
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
+@theme{
+  --font-ibm: "IBM Plex Mono", monospace; 
+  --font-pixel: "Press Start 2P", sytem-ui;
+  --font-fira: "Fira Code", monospace;
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+  --color-pink-50:  oklch(0.87 0.05 28.91);   /* très pâle rosé */
+  --color-pink-100: oklch(0.72 0.1714 22.31);  /* rose pastel doux */
+  --color-green-50: oklch(0.955 0.02 140);  /* vert menthe clair */
+  --color-green-100: oklch(0.925 0.035 135);/* vert tilleul pâle */
+  /*--color-green-200: oklch(0.53 0.0768 132.82);/* vert doux plus riche */
+  --color-green-200: oklch(0.67 0.0743 150.6);
+  
+  /*--color-green-200: oklch(0.8 0.0604 145.73); vert doux plus riche */
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
 }
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-} */
