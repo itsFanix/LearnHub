@@ -1,21 +1,19 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
 
+import './App.css'
+import MovieCard from './components/MovieCard'
+
+
+// condition redenring : condition ? ():() or condition && data
 function App() {
+
+const movieNumber = 1;
   
 
   return (
-    <div>
-      <p>Hello world</p>
-    </div>
-  )
+   <>  
+   </>
+  );
 }
 
-function Text(){
-  <div>
-    <p>hello world</p>
-  </div>
-}
-export default App
+export default App;
