@@ -34,7 +34,9 @@ function Home() {
           </form>
 
           <div className="movie-grid">
-            {movies.map(movie => <MovieCard movie ={movie}  key={movie.id}/>)}
+            {movies.map((movie) =>
+             
+              <MovieCard movie ={movie}  key={movie.id}/>)}
             </div>  
 
     </div>)
