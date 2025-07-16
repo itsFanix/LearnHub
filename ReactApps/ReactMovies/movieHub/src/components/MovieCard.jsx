@@ -9,7 +9,7 @@ function MovieCard({movie}){
     }
 
     return(
-    <div className="movie_card">
+    <div className="movie-card">
         <div className="movie-poster">
             <img src={movie.url} alt = {movie.title}/>
             <div className="movie-overlay">
@@ -21,7 +21,7 @@ function MovieCard({movie}){
 
         <div className="movie-info">
             <h3>{movie.title}</h3>
-            <h3>{movie.release_date}</h3>
+            <p>{movie.release_date}</p>
         </div>
     
     </div>
