@@ -9,19 +9,52 @@ function Home() {
   const [searchQuery, setSearchQuery] = useState("")
 
   //Just a comment
-  
+
 
   //The useEffect allows you to add side effects to your functions or to your components and define when they should run
-   searchMovies
-   getPopularMovies
+  //  searchMovies
+  //  getPopularMovies
 
     const [movies, setMovies] = useState([])
+    const [error, setError] = useState(null);
+    const [loading, setLoading] = useState(true)
 
-    useEffect(() => {}, [])
-    const handleSearch  = (e)  => {
+    useEffect(() => {
+      const loadPopularMovies = async () =>  {
+        try {
+          const popularMovies = await getPopularMovies()
+            setMovies(popularMovies)
+        }catch(err) {
+          setError("Failed to load movies..")
+        }
+        finally{
+          setLoading(false)
+        }
 
+      }
+      loadPopularMovies()
+    }, [])
+
+
+    const handleSearch  = async (e)  => {
       e.preventDefault()
-      alert(searchQuery)
+      if(!searchQuery.trim()) return
+      if(loading) return
+      setLoading(true)
+      try{
+        const searchResults = await searchMovies(searchQuery)
+        setMovies(searchResults)
+        setError(null)
+
+      }catch(error) {
+        console.log(err)
+        setError("Failed to search movie...")
+      }
+
+      finally{
+        setLoading(false)
+      }
+      
     }
 
     return ( 
@@ -36,12 +69,21 @@ function Home() {
            />
            <button type ="submit" className="search-button">Search</button>
           </form>
+        
+          {error && <div className="error-message">
+            {error}
+            </div>}
 
-          <div className="movie-grid">
+          {loading ?(
+            <div className="loading">Loading...</div>
+          ): (<div className="movies-grid">
             {movies.map((movie) =>
              
               <MovieCard movie ={movie}  key={movie.id}/>)}
-            </div>  
+            </div> )}
+
+
+           
 
     </div>)
 
