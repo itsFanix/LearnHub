@@ -10,7 +10,7 @@ function Home() {
 
   //Just a comment
 
-
+ // Fake it until to make it
   //The useEffect allows you to add side effects to your functions or to your components and define when they should run
   //  searchMovies
   //  getPopularMovies
