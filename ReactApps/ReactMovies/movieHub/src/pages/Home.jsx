@@ -10,11 +10,8 @@ function Home() {
 
   //Just a comment
 
- // Fake it until to make it
+ 
   //The useEffect allows you to add side effects to your functions or to your components and define when they should run
-  //  searchMovies
-  //  getPopularMovies
-
     const [movies, setMovies] = useState([])
     const [error, setError] = useState(null);
     const [loading, setLoading] = useState(true)
@@ -25,6 +22,7 @@ function Home() {
           const popularMovies = await getPopularMovies()
             setMovies(popularMovies)
         }catch(err) {
+          console.log(err)
           setError("Failed to load movies..")
         }
         finally{
@@ -50,7 +48,6 @@ function Home() {
         console.log(err)
         setError("Failed to search movie...")
       }
-
       finally{
         setLoading(false)
       }
