@@ -9,6 +9,7 @@ function Home() {
   const [searchQuery, setSearchQuery] = useState("")
 
   //Just a comment
+  
 
  
   //The useEffect allows you to add side effects to your functions or to your components and define when they should run
